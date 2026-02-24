@@ -1,0 +1,43 @@
+sudo apt update
+sudo apt upgrade -y
+sudo raspi-config-on all in ssh tat you want
+sudo reboot
+sudo apt install python3-rpi.gpio
+
+
+to get ip addresss------vcgencmd measure_temp
+to check cpu temperature---------free -h
+
+
+✅ 1️⃣ Enable Hardware Interfaces
+
+Run:
+
+sudo raspi-config
+
+Go to:
+
+Interface Options → Enable:
+
+I2C (for MPU6050, sensors)
+
+SPI (for displays)
+
+Camera (if needed)
+
+SSH (if remote access)
+
+Then reboot again.
+
+✅ 2️⃣ Install Python + Development Tools
+sudo apt install python3-pip python3-venv git -y
+
+Upgrade pip:
+
+pip3 install --upgrade pip
+✅ 3️⃣ Install GPIO Library
+sudo apt install python3-rpi.gpio
+
+Or modern alternative:
+
+pip3 install gpiozero
